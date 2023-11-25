@@ -50,10 +50,10 @@
             Console.WriteLine(s2); // aaaaaaa
             Console.WriteLine(s3); // world
             Console.WriteLine(s4); // orl
-            
+
             string msg1 = "hello";
             string msg2 = "hello";
-            
+
             Console.WriteLine(msg1 == msg2);
             Console.WriteLine(msg1.Equals(msg2));
             Console.WriteLine(msg1[0]);
@@ -62,19 +62,19 @@
             {
                 Console.WriteLine(c);
             }
-            
+
             string s11 = "A string is more ";
             string s21 = "than the sum of its chars.";
 
             Console.WriteLine(s11.GetHashCode());
-            
+
             s11 += s21;
             Console.WriteLine(s11);
             Console.WriteLine(s11.GetHashCode());
 
             string s31 = string.Concat(s11, s21, "1111", "!!!!");
             Console.WriteLine(s31);
-            
+
             string text = """
                           <element attr="content">
                             <body>
@@ -83,16 +83,16 @@
                           """;
             int val = 10;
             string text_inter = $"""
-                          <element attr="content">
-                            <body>
-                            {val}
-                            </body>
-                          </element>
-                          """;
+                                 <element attr="content">
+                                   <body>
+                                   {val}
+                                   </body>
+                                 </element>
+                                 """;
             string text11 = "<element attr=\"content\">" +
-                           "<body>" +
-                           "</body>" +
-                           "</element>";
+                            "<body>" +
+                            "</body>" +
+                            "</element>";
             Console.WriteLine(text);
             Console.WriteLine(text_inter);
             Console.WriteLine(text11);
@@ -105,7 +105,7 @@
             string[] values = new string[] { s5, s6, s7 };
             string str_final = string.Join(" : ", values);
             Console.WriteLine(str_final);
-            
+
             // -=================== Join (Объединение строк)
             string join_str1 = "Have";
             string join_str2 = "a nice";
@@ -122,7 +122,7 @@
 
             Console.WriteLine($"Compare ==: {comp_str1 == comp_str2}");
             Console.WriteLine($"Compare Equals: {comp_str1.Equals(comp_str2)}");
-            
+
             string[] compare_values = { "hello", "world", "about" };
             foreach (string item in compare_values)
             {
@@ -134,7 +134,7 @@
              * < 0 - строка 1 перед строкой 2 по алфавиту
              * > 0 - строка 1 после строки 2 по алфавиту
              */
-            
+
 
             // -=================== Find subString (Поиск подстроки) ===================
             string f_str = "This is just an ordinary string.";
@@ -147,14 +147,14 @@
             Console.WriteLine(
                 $"IndexOf 'j' (С указанием начала поиска): {f_str.IndexOf('j', 9)}"); // С указанием начала поиска
 
-            
+
             char[] chars1 = { 'T', 'o', 's' };
             char[] chars2 = { '!', '=', '^' };
-            
+
             Console.WriteLine($"IndexOfAny 'chars1': {f_str.IndexOfAny(chars1)}");
             Console.WriteLine($"IndexOfAny 'chars1': {f_str.IndexOfAny(chars1, 2)}");
             Console.WriteLine($"IndexOfAny 'chars2': {f_str.IndexOfAny(chars2)}");
-            
+
             Console.WriteLine($"IndexOf 'i': {f_str.IndexOf("just")}");
             Console.WriteLine($"LastIndexOf 'i': {f_str.LastIndexOf('i')}");
 
@@ -191,8 +191,8 @@
             string[] words12 = text2.Split(":");
             string[] words2 = text2.Split(':', StringSplitOptions.TrimEntries);
             string[] words3 = text2.Split(":", StringSplitOptions.RemoveEmptyEntries);
-            string[] words4 = text2.Split(new char[]{':', ' '}, StringSplitOptions.RemoveEmptyEntries);
-            
+            string[] words4 = text2.Split(new char[] { ':', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
             Console.WriteLine("Ordinary:");
             foreach (var item in words1) Console.Write($"'{item}'\t");
             Console.WriteLine("Ordinary:");
@@ -209,104 +209,104 @@
             string originalString = "   Hello, world!   ";
 
             string trimmedString = originalString.Trim();
-            Console.WriteLine($"Trim: {trimmedString}");                // Вывод: "Hello, world!"
+            Console.WriteLine($"Trim: {trimmedString}"); // Вывод: "Hello, world!"
 
             string originalString1 = "* *Hello, world!* *";
             char[] charsToRemove = { '*', ' ' };
             string trimmedCharsString = originalString1.Trim(charsToRemove);
-            
-            Console.WriteLine($"Trim Chars: {trimmedCharsString}");     // Вывод: "Hello, world!"
- 
+
+            Console.WriteLine($"Trim Chars: {trimmedCharsString}"); // Вывод: "Hello, world!"
+
             // -=================== TrimStart
             string trimmedStartString = originalString.TrimStart();
-            Console.WriteLine($"TrimStart: '{trimmedStartString}'");     // Вывод: "Hello, world!   "
+            Console.WriteLine($"TrimStart: '{trimmedStartString}'"); // Вывод: "Hello, world!   "
 
             // -=================== TrimEnd
             string trimmedEndString = originalString.TrimEnd();
-            Console.WriteLine($"TrimEnd: '{trimmedEndString}'");          // Вывод: "   Hello, world!"
+            Console.WriteLine($"TrimEnd: '{trimmedEndString}'"); // Вывод: "   Hello, world!"
 
             // -=================== Substring
             string originalSubstringString = "Hello, world!";
-            
+
             // Пример 1: Извлечение подстроки, начиная с определенной позиции
             string substring1 = originalSubstringString.Substring(7);
-            Console.WriteLine($"Substring(7): {substring1}");           // Вывод: "world!"
-            
+            Console.WriteLine($"Substring(7): {substring1}"); // Вывод: "world!"
+
             // Пример 2: Извлечение подстроки из определенного диапазона позиций
             string substring2 = originalSubstringString.Substring(7, 5);
-            Console.WriteLine($"Substring(7, 5): {substring2}");        // Вывод: "world"
+            Console.WriteLine($"Substring(7, 5): {substring2}"); // Вывод: "world"
 
             // Пример 3: Извлечение подстроки с использованием переменных
             int startIndex = 7;
             string world = "world";
             string substring3 = originalSubstringString.Substring(startIndex, world.Length);
-            Console.WriteLine($"Substring(startIndex, length): {substring3}");  // Вывод: "world"
+            Console.WriteLine($"Substring(startIndex, length): {substring3}"); // Вывод: "world"
 
             // -=================== Insert (Вставка) ===================
             string originalInsertString = "Hello, world!";
 
             // Пример вставки подстроки в середину строки
             string insertedString = originalInsertString.Insert(7, "beautiful ");
-            Console.WriteLine($"Insert (в середине): {insertedString}");        // Вывод: "Hello, beautiful world!"
-            
+            Console.WriteLine($"Insert (в середине): {insertedString}"); // Вывод: "Hello, beautiful world!"
+
             // Пример вставки подстроки в начало строки
             string insertedAtStart = originalInsertString.Insert(0, "Greeting: ");
-            Console.WriteLine($"Insert (в начале): {insertedAtStart}");         // Вывод: "Greeting: Hello, world!"
+            Console.WriteLine($"Insert (в начале): {insertedAtStart}"); // Вывод: "Greeting: Hello, world!"
 
             // Пример вставки подстроки в конец строки
             string insertedAtEnd = originalInsertString.Insert(originalInsertString.Length, " Have a nice day!");
-            Console.WriteLine($"Insert (в конце): {insertedAtEnd}");            // Вывод: "Hello, world! Have a nice day!"
-            
+            Console.WriteLine($"Insert (в конце): {insertedAtEnd}"); // Вывод: "Hello, world! Have a nice day!"
+
             // -=================== Remove (Удаление) ===================
             string originalRemoveString = "Hello, world!";
-            
+
             // Пример 1: Удаление символов начиная с позиции 7
             string removedSubstring1 = originalRemoveString.Remove(7);
-            Console.WriteLine($"Remove(7): {removedSubstring1}");               // Вывод: "Hello, "
+            Console.WriteLine($"Remove(7): {removedSubstring1}"); // Вывод: "Hello, "
 
             // Пример 2: Удаление 3 символов начиная с позиции 7
             string removedSubstring2 = originalRemoveString.Remove(7, 3);
-            Console.WriteLine($"Remove(7, 3): {removedSubstring2}");            // Вывод: "Hello, ld!"
+            Console.WriteLine($"Remove(7, 3): {removedSubstring2}"); // Вывод: "Hello, ld!"
 
             // Пример 3: Удаление символов с конца строки
             string removedFromEnd = originalRemoveString.Remove(originalRemoveString.Length - 1);
-            Console.WriteLine($"Remove (с конца строки): {removedFromEnd}");    // Вывод: "Hello, world"
+            Console.WriteLine($"Remove (с конца строки): {removedFromEnd}"); // Вывод: "Hello, world"
 
             // -=================== Replace (Замена) ===================
             string originalReplaceString = "Hello, world! Hello, C#!";
 
             // Пример 1: Замена одной подстроки на другую
             string replacedString1 = originalReplaceString.Replace("Hello", "Greetings");
-            Console.WriteLine($"Replace: {replacedString1}");                   // Вывод: "Greetings, world! Greetings, C#!"
+            Console.WriteLine($"Replace: {replacedString1}"); // Вывод: "Greetings, world! Greetings, C#!"
 
             // Пример 2: Замена символа на другой символ
             string replacedString2 = originalReplaceString.Replace('!', '?');
-            Console.WriteLine($"Replace chars: {replacedString2}");             // Вывод: "Hello, world? Hello, C#?"
+            Console.WriteLine($"Replace chars: {replacedString2}"); // Вывод: "Hello, world? Hello, C#?"
 
             // Пример 3: Удаление всех пробелов из строки
             string stringWithoutSpaces = originalReplaceString.Replace(" ", "");
-            Console.WriteLine($"Replace spaces: {stringWithoutSpaces}");        // Вывод: "Hello,world!Hello,C#!"
+            Console.WriteLine($"Replace spaces: {stringWithoutSpaces}"); // Вывод: "Hello,world!Hello,C#!"
 
             // -=================== ToLower and ToUpper (Смена регистра) ===================
             string hello = "Hello world!";
- 
+
             Console.WriteLine(hello.ToLower()); // hello world!
             Console.WriteLine(hello.ToUpper()); // HELLO WORLD!
 
             // -=================== Contains ===================
             string mainString = "Hello, world!";
-            
+
             // Пример 1: Проверка наличия подстроки
             bool containsSubstring1 = mainString.Contains("world");
-            Console.WriteLine($"Contains: {containsSubstring1}");                           // Вывод: True
+            Console.WriteLine($"Contains: {containsSubstring1}"); // Вывод: True
 
             // Пример 2: Проверка наличия подстроки (регистронезависимая)
             bool containsSubstring2 = mainString.Contains("WORLD", StringComparison.OrdinalIgnoreCase);
-            Console.WriteLine($"Contains (регистронезависимая): {containsSubstring2}");     // Вывод: True
+            Console.WriteLine($"Contains (регистронезависимая): {containsSubstring2}"); // Вывод: True
 
             // Пример 3: Проверка наличия символа
             bool containsCharacter = mainString.Contains(',');
-            Console.WriteLine($"Contains (символ): {containsCharacter}");                   // Вывод: True
+            Console.WriteLine($"Contains (символ): {containsCharacter}"); // Вывод: True
 
             // -=================== null character ===================-
             // The null character can be displayed and counted, like other chars.
@@ -322,25 +322,28 @@
             Console.WriteLine(s12 == s22);
             Console.WriteLine(s12.Equals(s22));
             Console.WriteLine(s12.CompareTo(s22));
-           
-            
+
+
             // -=================== Форматирование строк string.Format ===================-
             string formattedString1 = string.Format("Hello, {0}! Today is {1}.", "John", DateTime.Now.DayOfWeek);
-            Console.WriteLine("Hello, {0}! Today is {1}.", "John", DateTime.Now.DayOfWeek);                                            // Вывод: Hello, John! Today is Wednesday.
-            Console.WriteLine(formattedString1);                                            // Вывод: Hello, John! Today is Wednesday.
+            Console.WriteLine("Hello, {0}! Today is {1}.", "John", DateTime.Now.DayOfWeek);
+            // Вывод: Hello, John! Today is Wednesday.
+            Console.WriteLine(formattedString1);
+            // Вывод: Hello, John! Today is Wednesday.
 
             // Пример 2: Форматирование чисел
             string formattedString2 = string.Format("The price is: {0:C}", 123.45);
-            Console.WriteLine(formattedString2);                                            // Вывод: The price is: $123.45
+            Console.WriteLine(formattedString2); // Вывод: The price is: $123.45
 
             // Пример 3: Форматирование с использованием различных форматов
-            string formattedString3 = string.Format("Decimal: {0:D}, Hexadecimal: {0:X}, Scientific: {1:E}", 42, Math.PI);
-            Console.WriteLine(formattedString3);                                            // Вывод: Decimal: 42, Hexadecimal: 2A, Scientific: 3.141593E+00
-            
+            string formattedString3 =
+                string.Format("Decimal: {0:D}, Hexadecimal: {0:X}, Scientific: {1:E}", 42, Math.PI);
+            Console.WriteLine(formattedString3); // Вывод: Decimal: 42, Hexadecimal: 2A, Scientific: 3.141593E+00
+
             // Настраиваемые форматы
             long number = 19876543210;
             string result = string.Format("{0:+# (###) ###-##-##}", number);
-            Console.WriteLine(result);                                                      // +1 (987) 654-32-10
+            Console.WriteLine(result); // +1 (987) 654-32-10
         }
     }
 }
