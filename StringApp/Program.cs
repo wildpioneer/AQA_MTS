@@ -435,7 +435,7 @@ namespace StringApp
 
             bool isMatch = Regex.IsMatch(input, pattern);
             
-            if (isMatch == false)
+            if (isMatch)
             {
                 Console.WriteLine("Строка содержит цифры.");
             }
