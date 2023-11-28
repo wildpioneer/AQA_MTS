@@ -1,9 +1,11 @@
-﻿namespace Classes
+﻿using Classes.Models;
+
+namespace Classes
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        { /*
             int[] array = { 1, 8, 14, -4, 0, 7 };
 
             PrintArray();
@@ -143,8 +145,8 @@
                 return ("John", 25, "Test");
             }
 
-            var person = GetPersonInfo();
-            Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}");
+            var person1 = GetPersonInfo();
+            Console.WriteLine($"Name: {person1.Item1}, Age: {person1.Item2}");
 
             // -=================== Сжатый метод
             int ShortAdd(int х, int у) => х + у;
@@ -164,6 +166,62 @@
             Console.WriteLine($"Факториал числа 4 = {factorial4}");
             Console.WriteLine($"Факториал числа 5 = {factorial5}");
             Console.WriteLine($"Факториал числа 6 = {factorial6}");
+            
+*/            
+            // -=================== Классы ===================-
+            // -=================== Структура класса
+            EmptyClass emptyClass = new EmptyClass();
+
+            Person personObj1 = new Person();
+            Person personObj2 = new Person();
+            
+            Console.WriteLine(personObj1.Equals(personObj2));
+            
+            personObj1.Print();
+            
+            personObj1.name = "Alex";
+            personObj1.age = 45;
+            personObj1.Print();
+            personObj2.Print();
+            
+            // -=================== Создание конструкторов
+            PersonWithConstructor personWithConstructor = new PersonWithConstructor();
+            personWithConstructor.Print();
+
+            ConstructorCustom constructorCustom1 = new ConstructorCustom(10);
+            Console.WriteLine(constructorCustom1.GetHashCode());
+            ConstructorCustom constructorCustom2 = new ConstructorCustom("text");
+            
+            constructorCustom1 = new ConstructorCustom(20);
+            Console.WriteLine(constructorCustom1.GetHashCode());
+            
+            ConstructorByDefault constructorByDefault = new ConstructorByDefault();
+            
+            ConstructorFull constructorFull1 = new ConstructorFull();
+            ConstructorFull constructorFull2 = new ConstructorFull(1);
+            ConstructorFull constructorFull3 = new ConstructorFull("test");
+
+            // -=================== Цепочка вызова конструкторов
+            PersonChain personChain1 = new PersonChain();
+            PersonChain personChain2 = new PersonChain("Alex");
+            PersonChain personChain3 = new PersonChain("Alex", 45);
+            
+            personChain1.Print();
+            personChain2.Print();
+            personChain3.Print();
+            
+            // -=================== Первичные конструкторы
+            PersonPrimaryConstructors personPrimaryConstructors4 = new PersonPrimaryConstructors(name: "Alex", age: 23);
+            //PersonPrimaryConstructors personPrimaryConstructors1 = new PersonPrimaryConstructors();          - Ошибка
+            PersonPrimaryConstructors personPrimaryConstructors2 = new PersonPrimaryConstructors(name: "Alex");
+            //PersonPrimaryConstructors personPrimaryConstructors3 = new PersonPrimaryConstructors(age: 45);   - Ошибка
+            
+            personPrimaryConstructors2.Print();
+            personPrimaryConstructors4.Print();
+            
+            // -=================== This
+            PersonThis personThis = new PersonThis("Alex", 45);
+
         }
     }
 }
