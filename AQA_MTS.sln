@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypesAndOperators", "TypesAndOperators\TypesAndOperators.csproj", "{ABCDA5B3-4BAB-413C-A480-2F8103D14071}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringApp", "StringApp\StringApp.csproj", "{43B0D266-6EF6-4ADF-8A5D-760139A59E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringsHomeWork", "StringsHomeWork\StringsHomeWork.csproj", "{3EED46DD-2CB7-4C71-AB71-5FB3D42473F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ABCDA5B3-4BAB-413C-A480-2F8103D14071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABCDA5B3-4BAB-413C-A480-2F8103D14071}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABCDA5B3-4BAB-413C-A480-2F8103D14071}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABCDA5B3-4BAB-413C-A480-2F8103D14071}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43B0D266-6EF6-4ADF-8A5D-760139A59E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{43B0D266-6EF6-4ADF-8A5D-760139A59E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43B0D266-6EF6-4ADF-8A5D-760139A59E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43B0D266-6EF6-4ADF-8A5D-760139A59E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EED46DD-2CB7-4C71-AB71-5FB3D42473F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EED46DD-2CB7-4C71-AB71-5FB3D42473F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EED46DD-2CB7-4C71-AB71-5FB3D42473F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EED46DD-2CB7-4C71-AB71-5FB3D42473F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
