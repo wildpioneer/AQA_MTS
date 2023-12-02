@@ -87,10 +87,11 @@ public class Person
     */
 
     // Модификатор required
+    /*
     public required string Passport { get; set; } // - Ошибка при вызове базового конструктора
     public Person(string passport)
     {
         Passport = passport;
     }
-
+    */
 }
