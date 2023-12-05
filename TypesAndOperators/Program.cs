@@ -120,7 +120,7 @@
     bool b = true;
     string name1 = "Tom";
     string name2 = "Tom";
-    
+
     if ( !(name1.Equals(name2) && b) )
     {
         Console.WriteLine("Верно");
@@ -130,11 +130,11 @@
         Console.WriteLine("Не верно");
     }
     */
-
+/*
     int x = 10;
     int y = 20;
     int z;
-    
+
     if ( x < y )
     {
         z = x + y;
@@ -145,8 +145,8 @@
     }
 
     z = x < y ? x + y : x - y;
-    
 
+*/
     /*
     // Решение нашей задачи
     // Подготовка данных
@@ -197,3 +197,102 @@
     }
     */
 }
+
+
+int x = 6;
+
+if (x == 1)
+{
+    Console.WriteLine("1");
+}
+else if (x == 2)
+{
+    Console.WriteLine("2");
+}
+else if (x == 3)
+{
+    Console.WriteLine("3");
+}
+else
+{
+    Console.WriteLine("Не соответствует условиям");
+}
+
+switch (x)
+{
+    case 1:
+        Console.WriteLine("1");
+        break;
+    case 2:
+        Console.WriteLine("2");
+        break;
+    case 3:
+        Console.WriteLine("3");
+        break;
+    case 4:
+        Console.WriteLine("4");
+        break;
+    default:
+        Console.WriteLine("Не соответствует условиям");
+        break;
+}
+
+string name = "Alex1";
+
+switch (name)
+{
+    case "Alex":
+        Console.WriteLine("Alex");
+        break;
+    case "Tom":
+        Console.WriteLine("Tom");
+        break;
+}
+
+string name1 = "Alex1";
+
+switch (name1.Equals("Alex"))
+{
+    case true:
+        Console.WriteLine("Alex");
+        break;
+    case false:
+        Console.WriteLine("Tom");
+        break;
+}
+
+Console.WriteLine(DoOperation(1));
+Console.WriteLine(DoOperation(2));
+Console.WriteLine(DoOperation(3));
+
+
+int DoOperation(int x)
+{
+    switch (x)
+    {
+        case 1:
+            return 1;
+        case 2:
+            return 2;
+        default: return 0;
+    }
+}
+
+int DoOperation1(int x)
+{
+    int result = x switch
+    {
+        1 => 1,
+        2 => 2,
+        _ => 0
+    };
+
+    return result;
+}
+
+int DoOperation2(int x) => x switch
+{
+    1 => 1,
+    2 => 2,
+    _ => 0
+};
