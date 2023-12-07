@@ -1,3 +1,5 @@
+using Interfaces.Example;
+
 namespace Interfaces;
 
 public interface IModificators

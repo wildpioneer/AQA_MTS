@@ -10,4 +10,9 @@ public class StaticExample
         StaticVariable++;
         InstanceVar = StaticVariable;
     }
+
+    public static void Print()
+    {
+        Console.WriteLine($"Static Variable: {StaticVariable}");
+    }
 }
