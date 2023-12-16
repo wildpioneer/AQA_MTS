@@ -1,4 +1,5 @@
 using System.Collections;
+using Collections.IDictionary;
 
 namespace Collections.Helper;
 
