@@ -44,7 +44,6 @@ public class Example5
     private int Add(int x, int y) => x + y;
     private int Subtrack(int x, int y) => x - y;
     private int Multiply(int x, int y) => x * y;
-
     
     private Operation SelectOperation(OperationType operationType)
     {
