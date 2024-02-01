@@ -26,6 +26,7 @@
 
     <ItemGroup>
       <Folder Include="Helpers\" />
+      <Folder Include="Resources\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,9 +36,6 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <None Remove="Resources\index.html" />
-      <Content Include="Resources\index.html">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
 </Project>
