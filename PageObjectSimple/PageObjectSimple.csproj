@@ -36,9 +36,6 @@
       </Content>
       <None Remove="Resources\index.html" />
       <None Remove="Resources\download.jpeg" />
-      <Content Include="Resources\download.jpeg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
 </Project>
