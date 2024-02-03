@@ -13,14 +13,14 @@ public class WaitsTest : BaseTest
         IWebElement button = Driver.FindElement(By.TagName("button"));
         button.Click();
         
-        Assert.IsFalse(button.Displayed);
+        Assert.That(!button.Displayed);
 
         IWebElement loading = Driver.FindElement(By.Id("loading"));
-        Assert.IsTrue(loading.Displayed);
+        Assert.That(loading.Displayed);
         Thread.Sleep(10000);
-        Assert.IsFalse(loading.Displayed);
+        Assert.That(!loading.Displayed);
         
-        Assert.IsTrue(Driver.FindElement(By.Id("finish")).Displayed);
+        Assert.That(Driver.FindElement(By.Id("finish")).Displayed);
     }
 
     [Test]
@@ -33,14 +33,14 @@ public class WaitsTest : BaseTest
         IWebElement button = waitsHelper.WaitForVisibilityLocatedBy(By.TagName("button"));
         button.Click();
         
-        Assert.IsTrue(waitsHelper.WaitForElementInvisible(By.TagName("button")));
+        Assert.That(waitsHelper.WaitForElementInvisible(By.TagName("button")));
 
         IWebElement loading = waitsHelper.WaitForVisibilityLocatedBy(By.Id("loading"));
-        Assert.IsTrue(loading.Displayed);
+        Assert.That(loading.Displayed);
         
-        Assert.IsTrue(waitsHelper.WaitForElementInvisible(By.Id("loading")));
+        Assert.That(waitsHelper.WaitForElementInvisible(By.Id("loading")));
         
-        Assert.IsTrue(waitsHelper.WaitForVisibilityLocatedBy(By.Id("finish")).Displayed);
+        Assert.That(waitsHelper.WaitForVisibilityLocatedBy(By.Id("finish")).Displayed);
     }
 
     [Test]
@@ -51,13 +51,13 @@ public class WaitsTest : BaseTest
         IWebElement button = WaitsHelper.FluentWaitForElement(By.TagName("button"));
         button.Click();
         
-        Assert.IsTrue(WaitsHelper.WaitForElementInvisible(button));
+        Assert.That(WaitsHelper.WaitForElementInvisible(button));
 
         IWebElement loading = WaitsHelper.WaitForVisibilityLocatedBy(By.Id("loading"));
-        Assert.IsTrue(loading.Displayed);
+        Assert.That(loading.Displayed);
         
-        Assert.IsTrue(WaitsHelper.WaitForElementInvisible(loading));
+        Assert.That(WaitsHelper.WaitForElementInvisible(loading));
         
-        Assert.IsTrue(WaitsHelper.WaitForVisibilityLocatedBy(By.Id("finish")).Displayed);
+        Assert.That(WaitsHelper.WaitForVisibilityLocatedBy(By.Id("finish")).Displayed);
     }
 }

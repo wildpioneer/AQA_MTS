@@ -16,7 +16,7 @@ namespace SeleniumBasic.Core
                 _ => Driver
             };
 
-            //Driver?.Manage().Window.Maximize();
+            Driver?.Manage().Window.Maximize();
             Driver?.Manage().Cookies.DeleteAllCookies();
             Driver!.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
         }

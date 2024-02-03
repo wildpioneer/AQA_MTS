@@ -5,8 +5,8 @@ using SeleniumBasic.Helpers.Configuration;
 
 namespace SeleniumBasic.Tests;
 
-[Parallelizable(scope: ParallelScope.All)]
-[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+//[Parallelizable(scope: ParallelScope.All)]
+//[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
