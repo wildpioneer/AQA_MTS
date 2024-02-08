@@ -36,6 +36,9 @@
       </Content>
       <None Remove="Resources\index.html" />
       <None Remove="Resources\download.jpeg" />
+      <Content Update="appsettings.json.back">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

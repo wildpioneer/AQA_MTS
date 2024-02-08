@@ -1,3 +1,4 @@
+using NUnitTest.Pages;
 using SeleniumBasic.Helpers.Configuration;
 using SeleniumBasic.Pages;
 
@@ -8,7 +9,24 @@ public class LoginTest : BaseTest
     [Test]
     public void SuccessfulLoginTest()
     {
+        // Actions = Действия
+        
+        
+        // Проверка
+        Assert.That(
+            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
+                .TitleLabel.Text.Trim(), 
+            Is.EqualTo("All Projects"));
+    }
+
+    [Test]
+    public void InvalidUsernameLoginTest()
+    {
+        // Actions = Действия
         var loginPage = new LoginPage(Driver);
-        loginPage.EmailInput.SendKeys(Configurator.AppSettings.Username);
+        loginPage.Login("ssdd", "");
+        
+        // Проверка
+        Assert.That(loginPage.ErrorLabel.Text, Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
     }
 }
