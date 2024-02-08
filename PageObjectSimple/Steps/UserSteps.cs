@@ -16,8 +16,8 @@ public class UserSteps : BaseSteps
     public DashboardPage SuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
-        _loginPage.PswInput().SendKeys(password);
-        _loginPage.LoginInButton().Click();
+        _loginPage.PswInput.SendKeys(password);
+        _loginPage.LoginInButton.Click();
 
         return new DashboardPage(Driver);
     }

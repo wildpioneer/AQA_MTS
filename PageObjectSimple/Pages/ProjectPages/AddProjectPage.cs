@@ -2,15 +2,14 @@ using OpenQA.Selenium;
 
 namespace SeleniumBasic.Pages;
 
-public class ProductsPage : BasePage
+public class AddProjectPage : ProjectBasePage
 {
-    private static string END_POINT = "index.php?/dashboard";
+    private static string END_POINT = "index.php?/admin/projects/add";
     
     // Описание элементов
-    private static readonly By TitleLabelBy = By.ClassName("title");
-
+    private static readonly By AddButtonBy = By.Id("name");
     
-    public ProductsPage(IWebDriver driver) : base(driver)
+    public AddProjectPage(IWebDriver driver) : base(driver)
     {
     }
 
@@ -25,5 +24,5 @@ public class ProductsPage : BasePage
     }
 
     // Атомарные Методы
-    public IWebElement TitleLabel => Driver.FindElement(TitleLabelBy);
+    public IWebElement AddButton => Driver.FindElement(AddButtonBy); 
 }

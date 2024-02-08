@@ -5,6 +5,8 @@ namespace NUnitTest.Pages
 {
     public class LoginPage : BasePage
     {
+        private static string END_POINT = "";
+        
         // Описание элементов
         private static readonly By EmailInputBy = By.Id("name");
         private static readonly By PswInputBy = By.Id("password");
@@ -18,26 +20,39 @@ namespace NUnitTest.Pages
         }
         
         // Методы
-        public IWebElement EmailInput => Driver.FindElement(EmailInputBy);  
-        public IWebElement ErrorLabel => Driver.FindElement(ErrorLabelBy);  
+        public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);  
+        public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);  
+        public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
+        public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);  
+        public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
 
-        public IWebElement PswInput()
+        // Комплексные
+        public DashboardPage SuccessFulLogin(string username, string password)
         {
-            return Driver.FindElement(PswInputBy);
+            EmailInput.SendKeys(username);
+            PswInput.SendKeys(password);
+            LoginInButton.Click();
+
+            return new DashboardPage(Driver);
         }
 
-        public IWebElement RememberMeCheckbox()
+        public LoginPage IncorrectLogin(string username, string password)
         {
-            return Driver.FindElement(RememberMeCheckboxBy);  
+            EmailInput.SendKeys(username);
+            PswInput.SendKeys(password);
+            LoginInButton.Click();
+
+            return this;
         }
 
-        public IWebElement LoginInButton()
+        protected override string GetEndpoint()
         {
-           return Driver.FindElement(LoginInButtonBy);
+            return END_POINT;
         }
 
-        public void Login(string username, string password)
+        public override bool IsPageOpened()
         {
+            return LoginInButton.Displayed && EmailInput.Displayed;
         }
     }
 }

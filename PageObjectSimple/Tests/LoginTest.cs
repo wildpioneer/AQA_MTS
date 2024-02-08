@@ -10,7 +10,9 @@ public class LoginTest : BaseTest
     public void SuccessfulLoginTest()
     {
         // Actions = Действия
-        
+        Assert.That(new LoginPage(Driver)
+            .SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
+            .IsPageOpened());
         
         // Проверка
         Assert.That(
@@ -18,15 +20,28 @@ public class LoginTest : BaseTest
                 .TitleLabel.Text.Trim(), 
             Is.EqualTo("All Projects"));
     }
-
+    
     [Test]
     public void InvalidUsernameLoginTest()
     {
+        // Проверка
+        Assert.That(
+            new LoginPage(Driver)
+                .IncorrectLogin("ssdd", "")
+                .ErrorLabel.Text.Trim(), 
+            Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
+    }
+    
+    [Test]
+    public void SuccessfulLoginStepsTest()
+    {
         // Actions = Действия
-        var loginPage = new LoginPage(Driver);
-        loginPage.Login("ssdd", "");
+        
         
         // Проверка
-        Assert.That(loginPage.ErrorLabel.Text, Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
+        Assert.That(
+            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
+                .TitleLabel.Text.Trim(), 
+            Is.EqualTo("All Projects"));
     }
 }
