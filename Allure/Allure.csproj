@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>SeleniumBasic</RootNamespace>
+        <RootNamespace>PageObjectSteps</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,8 +18,8 @@
         <PackageReference Include="NUnit" Version="4.0.1" />
         <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
         <PackageReference Include="NUnit.Analyzers" Version="4.0.1">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="coverlet.collector" Version="6.0.0"/>
         <PackageReference Include="Selenium.Support" Version="4.17.0" />
@@ -29,14 +29,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Resources\chromedriver" />
-      <None Remove="appsettings.json" />
-      <Content Include="appsettings.json">
+      <Content Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <None Remove="Resources\index.html" />
-      <None Remove="Resources\download.jpeg" />
-      <Content Update="appsettings.json.back">
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
