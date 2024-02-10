@@ -1,7 +1,6 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Pages;
 
-namespace NUnitTest.Pages
+namespace PageObjectSteps.Pages
 {
     public class LoginPage : BasePage
     {
@@ -19,16 +18,6 @@ namespace NUnitTest.Pages
         {
         }
         
-        protected override string GetEndpoint()
-        {
-            return END_POINT;
-        }
-
-        public override bool IsPageOpened()
-        {
-            return LoginInButton.Displayed && EmailInput.Displayed;
-        }
-
         // Методы
         public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);  
         public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);  
@@ -53,6 +42,16 @@ namespace NUnitTest.Pages
             LoginInButton.Click();
 
             return this;
+        }
+
+        protected override string GetEndpoint()
+        {
+            return END_POINT;
+        }
+
+        public override bool IsPageOpened()
+        {
+            return LoginInButton.Displayed && EmailInput.Displayed;
         }
     }
 }

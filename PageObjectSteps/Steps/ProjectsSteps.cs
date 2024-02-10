@@ -1,7 +1,8 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Pages;
+using PageObjectSteps.Pages;
+using PageObjectSteps.Pages.ProjectPages;
 
-namespace SeleniumBasic.Steps;
+namespace PageObjectSteps.Steps;
 
 public class ProjectsSteps : BaseSteps
 {
