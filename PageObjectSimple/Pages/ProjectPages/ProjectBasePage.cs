@@ -2,25 +2,14 @@ using OpenQA.Selenium;
 
 namespace SeleniumBasic.Pages;
 
-public class ProjectBasePage : BasePage
+public abstract class ProjectBasePage : BasePage
 {
     private static readonly By NameInputBy = By.Id("name");
     
-    public ProjectBasePage(IWebDriver driver) : base(driver)
-    {
-    }
-
     public ProjectBasePage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
     {
     }
-
-    protected override string GetEndpoint()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool IsPageOpened()
-    {
-        throw new NotImplementedException();
-    }
+    
+    // Атомарные Методы
+    public IWebElement NameInput => WaitsHelper.WaitForExists(NameInputBy);
 }

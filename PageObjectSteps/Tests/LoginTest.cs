@@ -1,5 +1,6 @@
 using PageObjectSteps.Helpers.Configuration;
 using PageObjectSteps.Pages;
+using PageObjectSteps.Steps;
 
 namespace PageObjectSteps.Tests;
 
@@ -8,16 +9,11 @@ public class LoginTest : BaseTest
     [Test]
     public void SuccessfulLoginTest()
     {
-        // Actions = Действия
-        Assert.That(new LoginPage(Driver)
-            .SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-            .IsPageOpened());
+        UserSteps userSteps = new UserSteps(Driver);
+        DashboardPage dashboardPage = userSteps
+            .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
-        // Проверка
-        Assert.That(
-            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-                .TitleLabel.Text.Trim(), 
-            Is.EqualTo("All Projects"));
+        Assert.That(dashboardPage.IsPageOpened);
     }
     
     [Test]
@@ -25,22 +21,9 @@ public class LoginTest : BaseTest
     {
         // Проверка
         Assert.That(
-            new LoginPage(Driver)
+            new UserSteps(Driver)
                 .IncorrectLogin("ssdd", "")
-                .ErrorLabel.Text.Trim(), 
+                .GetErrorLabelText(), 
             Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
-    }
-    
-    [Test]
-    public void SuccessfulLoginStepsTest()
-    {
-        // Actions = Действия
-        
-        
-        // Проверка
-        Assert.That(
-            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-                .TitleLabel.Text.Trim(), 
-            Is.EqualTo("All Projects"));
     }
 }

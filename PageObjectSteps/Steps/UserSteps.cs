@@ -12,12 +12,22 @@ public class UserSteps : BaseSteps
         _loginPage = new LoginPage(Driver);
     }
 
+    // Комплексные
     public DashboardPage SuccessfulLogin(string username, string password)
+    {
+        _loginPage.EmailInput.SendKeys(username);
+        _loginPage.PswInput.SendKeys(password);
+        _loginPage.ClickLoginInButton();
+
+        return new DashboardPage(Driver);
+    }
+    
+    public LoginPage IncorrectLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
         _loginPage.PswInput.SendKeys(password);
         _loginPage.LoginInButton.Click();
 
-        return new DashboardPage(Driver);
+        return _loginPage;
     }
 }

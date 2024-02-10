@@ -12,6 +12,15 @@ public class ProjectsSteps : BaseSteps
         DashboardPage dashboardPage = new DashboardPage(Driver);
     }
 
+    public void AddProductToCart(List<string> Products)
+    {
+        new NavigationSteps(Driver).NavigateToProducts();
+        
+        
+        // Пройтись по всей коллекции и найти эелементы на странице
+        // Нажать кнопку Добавить для каждого элемента
+    }
+    
     public void CreateProject()
     {
         
