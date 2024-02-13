@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace PageObjectSteps.Steps;
+namespace Allure.Steps;
 
 public class BaseSteps
 {

@@ -1,19 +1,28 @@
+using Allure.Core;
+using Allure.Helpers;
+using Allure.Helpers.Configuration;
+using Allure.Net.Commons;
+using Allure.Steps;
+using NUnit.Allure.Core;
 using OpenQA.Selenium;
-using PageObjectSteps.Core;
-using PageObjectSteps.Helpers;
-using PageObjectSteps.Helpers.Configuration;
-using PageObjectSteps.Steps;
 
-namespace PageObjectSteps.Tests;
+namespace Allure.Tests;
 
-//[Parallelizable(scope: ParallelScope.All)]
-//[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[Parallelizable(scope: ParallelScope.All)]
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+[AllureNUnit]
 public class BaseTest
 {
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected UserSteps UserSteps;
+
+    [OneTimeSetUp]
+    public static void GlobalSetup()
+    {
+        AllureLifecycle.Instance.CleanupResultDirectory();
+    }
     
     [SetUp]
     public void FactoryDriverTest()
@@ -23,7 +32,7 @@ public class BaseTest
 
         UserSteps = new UserSteps(Driver);
         
-        Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
+        //Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }
 
     [TearDown]

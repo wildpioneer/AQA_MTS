@@ -1,7 +1,7 @@
+using Allure.Pages;
 using OpenQA.Selenium;
-using PageObjectSteps.Pages;
 
-namespace PageObjectSteps.Steps;
+namespace Allure.Steps;
 
 public class UserSteps : BaseSteps
 {
