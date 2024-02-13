@@ -1,4 +1,5 @@
 using Allure.Pages;
+using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
 
 namespace Allure.Steps;
@@ -13,6 +14,7 @@ public class UserSteps : BaseSteps
     }
 
     // Комплексные
+    [AllureStep]
     public DashboardPage SuccessfulLogin(string username, string password)
     {
         _loginPage.EmailInput.SendKeys(username);
