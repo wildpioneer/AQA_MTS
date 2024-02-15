@@ -1,8 +1,8 @@
-using Allure.Pages;
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using Wrappers.Pages;
 
-namespace Allure.Steps;
+namespace Wrappers.Steps;
 
 public class UserSteps : BaseSteps
 {

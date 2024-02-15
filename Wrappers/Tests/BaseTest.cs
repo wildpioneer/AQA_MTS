@@ -1,13 +1,13 @@
 using System.Text;
-using Allure.Core;
-using Allure.Helpers;
-using Allure.Helpers.Configuration;
 using Allure.Net.Commons;
-using Allure.Steps;
 using NUnit.Allure.Core;
 using OpenQA.Selenium;
+using Wrappers.Core;
+using Wrappers.Helpers;
+using Wrappers.Helpers.Configuration;
+using Wrappers.Steps;
 
-namespace Allure.Tests;
+namespace Wrappers.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
@@ -18,7 +18,6 @@ public class BaseTest
     protected WaitsHelper WaitsHelper { get; private set; }
 
     protected UserSteps UserSteps;
-    protected AllureSteps AllureSteps;
 
     [OneTimeSetUp]
     public static void GlobalSetup()
@@ -33,7 +32,6 @@ public class BaseTest
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));
 
         UserSteps = new UserSteps(Driver);
-        AllureSteps = new AllureSteps(Driver);
         
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
     }

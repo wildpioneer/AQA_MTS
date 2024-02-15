@@ -1,8 +1,8 @@
-using Allure.Helpers.Configuration;
-using Allure.Pages;
-using Allure.Steps;
+using Wrappers.Helpers.Configuration;
+using Wrappers.Pages;
+using Wrappers.Steps;
 
-namespace Allure.Tests;
+namespace Wrappers.Tests;
 
 public class LoginTest : BaseTest
 {

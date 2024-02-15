@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>Allure</RootNamespace>
+        <RootNamespace>Wrappers</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
