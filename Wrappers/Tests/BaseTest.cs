@@ -52,8 +52,8 @@ public class BaseTest
             AllureLifecycle.Instance.AddAttachment("Screenshot", "image/png", screenshotBytes);
 
             // Вариант 2
-            AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
-            AllureApi.AddAttachment("data.txt", "text/plain", Encoding.UTF8.GetBytes("This os the file content."));
+            // AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
+            // AllureApi.AddAttachment("data.txt", "text/plain", Encoding.UTF8.GetBytes("This os the file content."));
         }
 
         Driver.Quit();

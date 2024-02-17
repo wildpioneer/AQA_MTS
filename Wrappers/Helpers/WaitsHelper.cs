@@ -19,6 +19,11 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
         return _wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(locator));
     }
 
+    public ReadOnlyCollection<IWebElement> WaitForPresenceOfAllElementsLocatedBy(By locator)
+    {
+        return _wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(locator));
+    }
+
     public IWebElement WaitForExists(By locator)
     {
         return _wait.Until(ExpectedConditions.ElementExists(locator));

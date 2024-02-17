@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Wrappers.Elements;
 
 namespace Wrappers.Pages
 {
@@ -34,7 +35,8 @@ namespace Wrappers.Pages
         public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);
         public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
         public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
-        public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
+        // public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
+        public Button LoginInButton => new Button(Driver, LoginInButtonBy);
         
         // Методы действий с элементами
         public void ClickLoginInButton() => LoginInButton.Click();

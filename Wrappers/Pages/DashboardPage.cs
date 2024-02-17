@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using Wrappers.Elements;
 
 namespace Wrappers.Pages;
 
@@ -8,6 +9,7 @@ public class DashboardPage : BasePage
     
     // Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("page_title");
+    private static readonly By AddProjectButtonBy = By.Id("sidebar-projects-add");
 
 
     // Инициализация класса
@@ -27,4 +29,5 @@ public class DashboardPage : BasePage
 
     // Атомарные Методы
     public IWebElement TitleLabel => WaitsHelper.WaitForExists(TitleLabelBy);
+    public Button AddProjectButton => new(Driver, AddProjectButtonBy);
 }
