@@ -46,6 +46,7 @@ namespace ValueOfObjects.Helpers.Configuration
         }
 
         public static string? BrowserType => Configuration[nameof(BrowserType)];
+
         public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);
     }
 }

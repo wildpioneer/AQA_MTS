@@ -9,7 +9,6 @@ public class LoginTest : BaseTest
     [Test]
     public void SuccessfulLoginTest()
     {
-        UserSteps userSteps = new UserSteps(Driver);
         DashboardPage dashboardPage = _navigationSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
