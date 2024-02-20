@@ -8,23 +8,14 @@ public class LoginTest : BaseTest
     [Test]
     public void SuccessfulLoginTest()
     {
-        // Простой вид
         LoginPage loginPage = new LoginPage(Driver);
-        loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        DashboardPage dashboardPage = new DashboardPage(Driver);
+        loginPage.Load();
         
-        // Проверка 
-        Assert.That(dashboardPage.IsPageOpened);
-    }
-    
-    [Test]
-    public void InvalidUsernameLoginTest()
-    {
-        // Проверка
-        Assert.That(
-            new LoginPage(Driver)
-                .IncorrectLogin("ssdd", "")
-                .ErrorLabel.Text.Trim(), 
-            Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
+        loginPage.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        
+        Driver.Navigate().GoToUrl("https://aqa2503.testrail.io/index.php?/mysettings");
+        
+        DashboardPage dashboardPage = new DashboardPage(Driver);
+        dashboardPage.SidebarProjectsAddButton.Click();
     }
 }

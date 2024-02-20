@@ -2,41 +2,37 @@ using OpenQA.Selenium;
 
 namespace SeleniumBasic.Pages
 {
-    public class LoginPage : BasePage
+    public class LoginPage(IWebDriver? driver) : BasePage(driver)
     {
-        private static string END_POINT = "";
-        
+        private const string END_POINT = "";
+
         // Описание элементов
         private static readonly By EmailInputBy = By.Id("name");
         private static readonly By PswInputBy = By.Id("password");
         private static readonly By RememberMeCheckboxBy = By.Id("rememberme");
         private static readonly By LoginInButtonBy = By.Id("button_primary");
         private static readonly By ErrorLabelBy = By.CssSelector("[data-testid='loginErrorText']");
-        
+
         // Инициализация класса
-        public LoginPage(IWebDriver driver) : base(driver)
-        {
-        }
-        
         protected override string GetEndpoint()
         {
             return END_POINT;
         }
 
-        public override bool IsPageOpened()
+        protected override bool EvaluateLoadedStatus()
         {
             return LoginInButton.Displayed && EmailInput.Displayed;
         }
 
         // Методы
-        public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);  
-        public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);  
+        public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
+        public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);
         public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
-        public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);  
+        public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
         public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
 
         // Комплексные
-        public DashboardPage SuccessFulLogin(string username, string password)
+        public DashboardPage SuccessfulLogin(string username, string password)
         {
             EmailInput.SendKeys(username);
             PswInput.SendKeys(password);

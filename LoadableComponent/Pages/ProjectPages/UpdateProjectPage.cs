@@ -2,17 +2,16 @@ using OpenQA.Selenium;
 
 namespace SeleniumBasic.Pages.ProjectPages;
 
-public class UpdateProjectPage : BasePage
+public class UpdateProjectPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
 {
-    private static string END_POINT = "index.php?/admin/projects/add";
-    
+    private const string END_POINT = "index.php?/admin/projects/add";
+
     // Описание элементов
     private static readonly By SaveButtonBy = By.Id("name");
-
-
     
-    public UpdateProjectPage(IWebDriver driver) : base(driver)
+    protected override bool EvaluateLoadedStatus()
     {
+        return WaitsHelper.WaitForExists(SaveButtonBy).Displayed;
     }
 
     protected override string GetEndpoint()
@@ -20,11 +19,6 @@ public class UpdateProjectPage : BasePage
         return END_POINT;
     }
 
-    public override bool IsPageOpened()
-    {
-        throw new NotImplementedException();
-    }
-
     // Атомарные Методы
-    public IWebElement SaveButton => WaitsHelper.WaitForExists(SaveButtonBy); 
+    public IWebElement SaveButton => WaitsHelper.WaitForExists(SaveButtonBy);
 }
