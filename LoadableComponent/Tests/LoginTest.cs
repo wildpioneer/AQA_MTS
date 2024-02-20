@@ -1,4 +1,3 @@
-using NUnitTest.Pages;
 using SeleniumBasic.Helpers.Configuration;
 using SeleniumBasic.Pages;
 

@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SeleniumBasic.Pages;
+namespace SeleniumBasic.Pages.ProjectPages;
 
 public class AddProjectPage : ProjectBasePage
 {

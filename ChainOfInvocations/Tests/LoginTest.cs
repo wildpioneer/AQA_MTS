@@ -10,7 +10,7 @@ public class LoginTest : BaseTest
     public void SuccessfulLoginTest()
     {
         UserSteps userSteps = new UserSteps(Driver);
-        DashboardPage dashboardPage = userSteps
+        DashboardPage dashboardPage = _navigationSteps
             .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
         Assert.That(dashboardPage.IsPageOpened);
@@ -21,7 +21,7 @@ public class LoginTest : BaseTest
     {
         // Проверка
         Assert.That(
-            new UserSteps(Driver)
+            _navigationSteps
                 .IncorrectLogin("ssdd", "")
                 .GetErrorLabelText(), 
             Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
