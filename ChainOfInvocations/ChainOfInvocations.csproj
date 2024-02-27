@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>PageObjectSteps</RootNamespace>
+        <RootNamespace>ChainOfInvocations</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

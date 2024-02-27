@@ -1,6 +1,5 @@
 using PageObjectSteps.Helpers.Configuration;
 using PageObjectSteps.Pages;
-using PageObjectSteps.Steps;
 
 namespace PageObjectSteps.Tests;
 
