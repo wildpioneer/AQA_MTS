@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreProject", "CoreProject\CoreProject.csproj", "{F4BD33C7-4F51-4E2C-96FC-65674AA54CAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestProject", "SpecFlowTestProject\SpecFlowTestProject.csproj", "{77AC0757-37B6-4100-A5E4-D32F3481A147}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F4BD33C7-4F51-4E2C-96FC-65674AA54CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4BD33C7-4F51-4E2C-96FC-65674AA54CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4BD33C7-4F51-4E2C-96FC-65674AA54CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
