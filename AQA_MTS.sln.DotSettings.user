@@ -3,5 +3,8 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::77AC0757-37B6-4100-A5E4-D32F3481A147::net8.0::SpecFlowTestProject.Features.ТестСBackgroundБлокомFeature&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::77AC0757-37B6-4100-A5E4-D32F3481A147::net8.0::SpecFlowTestProject.Features.ПараметризированныеТестыFeature&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::77AC0757-37B6-4100-A5E4-D32F3481A147::net8.0::SpecFlowTestProject.Features.НачальныйТестДляИзученияCucumberFeature.ПростойТестCGivenИWhen&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::77AC0757-37B6-4100-A5E4-D32F3481A147::net8.0::SpecFlowTestProject.Features.НачальныйТестДляИзученияCucumberFeature.ПростойТестБезТела&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::77AC0757-37B6-4100-A5E4-D32F3481A147::net8.0::SpecFlowTestProject.Features.НачальныйТестДляИзученияCucumberFeature&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
