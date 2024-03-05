@@ -1,8 +1,8 @@
-using NLogExample.Models;
-using NLogExample.Pages.ProjectPages;
+using CoreProject.Models;
+using CoreProject.Pages.ProjectPages;
 using OpenQA.Selenium;
 
-namespace NLogExample.Steps;
+namespace CoreProject.Steps;
 
 public class ProjectSteps(IWebDriver driver) : BaseStep(driver)
 {

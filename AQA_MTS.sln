@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreProject", "CoreProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestProject", "SpecFlowTestProject\SpecFlowTestProject.csproj", "{77AC0757-37B6-4100-A5E4-D32F3481A147}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedSpecFlowProject", "AdvancedSpecFlowProject\AdvancedSpecFlowProject.csproj", "{8AE88A65-139C-4383-9C24-6FC0E8A40544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77AC0757-37B6-4100-A5E4-D32F3481A147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
