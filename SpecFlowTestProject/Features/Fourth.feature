@@ -15,7 +15,6 @@ Feature: Параметризированные тесты
         When user "<username>" with password "<password>" logged in
         Then username is "<visibleText>"
 
-    @table
         Examples:
           | username                | password       | visibleText |
           | atrostyanko@gmail.com   | Americana#1978 | Alex Tros   |

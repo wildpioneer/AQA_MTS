@@ -115,10 +115,8 @@ namespace SpecFlowTestProject.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Таблицы")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.TestCaseAttribute("atrostyanko@gmail.com", "Americana#1978", "Alex Tros", new string[] {
-                "table"}, Category="table")]
-        [NUnit.Framework.TestCaseAttribute("atrostyanko+1@gmail.com", "Americana#1978", "Alex Tros1", new string[] {
-                "table"}, Category="table")]
+        [NUnit.Framework.TestCaseAttribute("atrostyanko@gmail.com", "Americana#1978", "Alex Tros", null)]
+        [NUnit.Framework.TestCaseAttribute("atrostyanko+1@gmail.com", "Americana#1978", "Alex Tros1", null)]
         public void Таблицы(string username, string password, string visibleText, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -166,7 +164,7 @@ namespace SpecFlowTestProject.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Use big text", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 24
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -176,7 +174,7 @@ namespace SpecFlowTestProject.Features
             else
             {
                 this.ScenarioStart();
-#line 25
+#line 24
         testRunner.Given("a blog post named \"Random\" with Markdown body", "Some Title, Eh?\n===============\nHere is the first paragraph of my blog post. Lore" +
                         "m ipsum dolor sit amet,\nconsectetur adipiscing elit.", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
