@@ -1,7 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=46bacb6b_002Ddb02_002D4df3_002Da255_002D1f269b575d08/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ApiLoginFunctionalityFeature" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f877ba3f_002Da82f_002D4ab1_002Da1f8_002D88ebdeba3f1b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CalculatorFeature" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::8AE88A65-139C-4383-9C24-6FC0E8A40544::net8.0::AdvancedSpecFlowProject.Features.ApiLoginFunctionalityFeature&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::8AE88A65-139C-4383-9C24-6FC0E8A40544::net8.0::AdvancedSpecFlowProject.Features.LoginFunctionalityFeature&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::848380EE-BF3F-4B45-BAE2-6B004EDF7172::net8.0::ComplexSelenium.Specs.Features.CalculatorFeature&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

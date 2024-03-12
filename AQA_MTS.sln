@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestProject", "Spec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedSpecFlowProject", "AdvancedSpecFlowProject\AdvancedSpecFlowProject.csproj", "{8AE88A65-139C-4383-9C24-6FC0E8A40544}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexSelenium.Specs", "ComplexSelenium.Specs\ComplexSelenium.Specs.csproj", "{848380EE-BF3F-4B45-BAE2-6B004EDF7172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AE88A65-139C-4383-9C24-6FC0E8A40544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848380EE-BF3F-4B45-BAE2-6B004EDF7172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848380EE-BF3F-4B45-BAE2-6B004EDF7172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848380EE-BF3F-4B45-BAE2-6B004EDF7172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848380EE-BF3F-4B45-BAE2-6B004EDF7172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
