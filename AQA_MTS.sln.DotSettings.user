@@ -6,5 +6,8 @@
     &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.ReqresInTest.SimplePostTest&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.TestRailSimpleTest.SimpleGetTest&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.TestRailSimpleTest.AdvancedGetTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.TestRailSimpleTest.SimplePostTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.TestRailSimpleTest.AdvancedPostTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.SchemaTest.JsonSchemaTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
