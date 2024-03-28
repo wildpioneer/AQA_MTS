@@ -4,6 +4,8 @@
     &lt;TestAncestor&gt;
       &lt;TestId&gt;NUnit3x::FDA76A72-9B11-44A1-B596-D5C74573ED1C::net8.0::TestRailComplexApi.Tests.ProjectTest.AddProjectTest&lt;/TestId&gt;
       &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.TestRailSimpleTest.SimpleGetTest&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.SchemaTest.JsonSchemaTest&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::F4BD33C7-4F51-4E2C-96FC-65674AA54CAD::net8.0::RestSharpApi.Tests.SchemaTest.SchemaTest1&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
     &lt;ProjectFile&gt;FDA76A72-9B11-44A1-B596-D5C74573ED1C/d:Tests/f:ProjectTest.cs&lt;/ProjectFile&gt;
   &lt;/Or&gt;
