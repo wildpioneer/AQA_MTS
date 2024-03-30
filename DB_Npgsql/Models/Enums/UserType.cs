@@ -1,4 +1,4 @@
-namespace TestRailComplexApi.Models.Enums;
+namespace DB_Npgsql.Models.Enums;
 
 public enum UserType
 {

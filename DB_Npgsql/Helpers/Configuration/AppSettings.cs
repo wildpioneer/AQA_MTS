@@ -1,4 +1,4 @@
-namespace TestRailComplexApi.Helpers.Configuration;
+namespace DB_Npgsql.Helpers.Configuration;
 
 public class AppSettings
 {

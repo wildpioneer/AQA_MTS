@@ -1,6 +1,6 @@
-using TestRailComplexApi.Models.Enums;
+using DB_Npgsql.Models.Enums;
 
-namespace TestRailComplexApi.Models;
+namespace DB_Npgsql.Models;
 
 public record User
 {

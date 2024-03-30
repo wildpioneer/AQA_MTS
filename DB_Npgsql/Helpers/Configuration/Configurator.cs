@@ -1,7 +1,9 @@
 using System.Reflection;
+using DB_Npgsql.Models;
+using DB_Npgsql.Models.Enums;
 using Microsoft.Extensions.Configuration;
 
-namespace RestSharpApi.Helpers.Configuration
+namespace DB_Npgsql.Helpers.Configuration
 {
     public static class Configurator
     {
@@ -17,7 +19,7 @@ namespace RestSharpApi.Helpers.Configuration
         {
             var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var builder = new ConfigurationBuilder()
-                .SetBasePath(basePath ?? throw new InvalidOperationException())
+                .SetBasePath(basePath)
                 .AddJsonFile("appsettings.json");
 
             var appSettingFiles = Directory.EnumerateFiles(basePath ?? string.Empty, "appsettings.*.json");
@@ -38,17 +40,41 @@ namespace RestSharpApi.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
-                appSettings.Username = child["Username"];
-                appSettings.Password = child["Password"];
+                appSettings.URI = child["URI"];
 
                 return appSettings;
             }
         }
 
-        public static string? BrowserType => Configuration[nameof(BrowserType)];
+        public static List<User?> Users
+        {
+            get
+            {
+                List<User?> users = new List<User?>();
+                var child = Configuration.GetSection("Users");
+                foreach (var section in child.GetChildren())
+                {
+                    var user = new User
+                    {
+                        Password = section["Password"],
+                        Username = section["Username"]
+                    };
+                    user.UserType = section["UserType"].ToLower() switch
+                    {
+                        "admin" => UserType.Admin,
+                        "user" => UserType.Standard,
+                        _ => user.UserType
+                    };
 
-        public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);
-        
-        public static string? Language => Configuration[nameof(Language)];
+                    users.Add(user);
+                }
+
+                return users;
+            }
+        }
+
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
+
+        public static User? UserByUsername(string username) => Users.Find(x => x?.Username == username);
     }
 }
