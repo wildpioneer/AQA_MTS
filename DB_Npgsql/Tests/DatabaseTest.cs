@@ -31,6 +31,18 @@ public class DatabaseTest
     }
 
     [Test]
+    public void GetSingleCustomerTest()
+    {
+        _logger.Info("Started GetSingleCustomerTest...");
+
+        Customer actualCustomer = _customerService!.GetCustomerById(1);
+        
+        Assert.That(actualCustomer.Firstname, Is.EqualTo("Ольга"));
+        
+        _logger.Info("Completed GetSingleCustomerTest...");
+    }
+
+    [Test]
     public void AddCustomerTest()
     {
         _logger.Info("Started AddCustomerTest...");
