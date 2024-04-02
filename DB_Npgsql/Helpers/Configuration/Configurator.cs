@@ -46,6 +46,24 @@ namespace DB_Npgsql.Helpers.Configuration
             }
         }
 
+        public static DbSettings DbSettings
+        {
+            get
+            {
+                var dbSettings = new DbSettings();
+                var child = Configuration.GetSection("DbSettings");
+
+                dbSettings.DB_Driver = child["DB_Driver"];
+                dbSettings.DB_Server = child["DB_Server"];
+                dbSettings.DB_Port = child["DB_Port"];
+                dbSettings.DB_Name = child["DB_Name"];
+                dbSettings.DB_Username = child["DB_Username"];
+                dbSettings.DB_Password = child["DB_Password"];
+
+                return dbSettings;
+            }
+        }
+
         public static List<User?> Users
         {
             get
