@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Npgsql", "DB_Npgsql\DB_Npgsql.csproj", "{58327732-107E-44DE-B7D9-A358B41F0959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_EFCore", "DB_EFCore\DB_EFCore.csproj", "{4B1261BF-D2AC-4BF1-98B4-6411CB84BD16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{58327732-107E-44DE-B7D9-A358B41F0959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58327732-107E-44DE-B7D9-A358B41F0959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58327732-107E-44DE-B7D9-A358B41F0959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B1261BF-D2AC-4BF1-98B4-6411CB84BD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B1261BF-D2AC-4BF1-98B4-6411CB84BD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B1261BF-D2AC-4BF1-98B4-6411CB84BD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B1261BF-D2AC-4BF1-98B4-6411CB84BD16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

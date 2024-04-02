@@ -2,5 +2,6 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2ffad4e_002D6243_002D418c_002Daae0_002D9b09b2aa0ea5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DaoDatabaseTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::58327732-107E-44DE-B7D9-A358B41F0959::net8.0::DB_Npgsql.Tests.DaoDatabaseTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::4B1261BF-D2AC-4BF1-98B4-6411CB84BD16::net8.0::DB_EFCore.Tests.InitialDataBaseTest.DB_Test1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
