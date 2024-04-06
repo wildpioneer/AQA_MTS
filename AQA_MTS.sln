@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRail", "TestRail\TestRail.csproj", "{FDA76A72-9B11-44A1-B596-D5C74573ED1C}"
 EndProject
 Global
