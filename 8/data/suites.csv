@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 09 16:05:41 GMT 2024","Tue Apr 09 16:05:52 GMT 2024","10803","","","","LoginTest","SuccessfulLoginTest","SuccessfulLoginTest",""
+"passed","Tue Apr 09 16:05:41 GMT 2024","Tue Apr 09 16:05:41 GMT 2024","393","","","","ProjectFakerTest","AddProjectTest","AddProjectTest",""
+"passed","Tue Apr 09 16:05:41 GMT 2024","Tue Apr 09 16:05:41 GMT 2024","397","","","","ProjectTest","AddProjectTest","AddProjectTest",""
