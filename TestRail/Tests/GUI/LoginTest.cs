@@ -30,7 +30,7 @@ public class LoginTest : BaseTest
                     Password = Admin.Password
                 })
                 .GetErrorLabelText(), 
-            Is.EqualTo("Email/Login or Password is incorrect. Please try again.1"));
+            Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
     }
 
 }
