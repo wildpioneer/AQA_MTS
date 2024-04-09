@@ -1,4 +1,4 @@
-using Allure.NUnit.Attributes;
+using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
 using TestRail.Models;
 using TestRail.Pages;

@@ -1,5 +1,5 @@
-using Allure.NUnit;
 using NLog;
+using NUnit.Allure.Core;
 using TestRail.Clients;
 using TestRail.Services;
 

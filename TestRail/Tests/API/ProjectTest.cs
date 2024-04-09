@@ -10,6 +10,8 @@ public class ProjectTest : BaseApiTest
 
     [Test]
     [Order(1)]
+    [Category("Smoke")]
+    [Category("Regression")]
     public void AddProjectTest()
     {
         _project = new Project
@@ -32,5 +34,13 @@ public class ProjectTest : BaseApiTest
 
         _project = actualProject.Result;
         _logger.Info(_project.ToString);
+    }
+    
+    [Test]
+    [Order(2)]
+    [Category("Regression")]
+    public void GetProjectTest()
+    {
+        _logger.Info(ProjectService?.GetProject(_project.Id.ToString()).Result.ToString());
     }
 }
