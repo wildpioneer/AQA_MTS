@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 09 16:08:08 GMT 2024","Tue Apr 09 16:08:09 GMT 2024","538","","","","ProjectFakerTest","AddProjectTest","AddProjectTest",""
+"failed","Tue Apr 09 16:08:08 GMT 2024","Tue Apr 09 16:08:17 GMT 2024","8736","","","","LoginTest","InvalidUsernameLoginTest","InvalidUsernameLoginTest",""
+"passed","Tue Apr 09 16:08:08 GMT 2024","Tue Apr 09 16:08:09 GMT 2024","541","","","","ProjectTest","AddProjectTest","AddProjectTest",""
+"passed","Tue Apr 09 16:08:09 GMT 2024","Tue Apr 09 16:08:09 GMT 2024","259","","","","ProjectFakerTest","DeleteProjectTest","DeleteProjectTest",""
+"passed","Tue Apr 09 16:08:08 GMT 2024","Tue Apr 09 16:08:29 GMT 2024","20595","","","","ProjectTest","SuccessfulAddProjectTest","SuccessfulAddProjectTest",""
+"passed","Tue Apr 09 16:08:09 GMT 2024","Tue Apr 09 16:08:18 GMT 2024","8357","","","","LoginTest","SuccessfulLoginTest","SuccessfulLoginTest",""
+"passed","Tue Apr 09 16:08:09 GMT 2024","Tue Apr 09 16:08:09 GMT 2024","224","","","","ProjectTest","GetProjectTest","GetProjectTest",""
