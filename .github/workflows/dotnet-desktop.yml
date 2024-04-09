@@ -1,9 +1,6 @@
 name: .NET Core Desktop
 
 on:
-  push:
-    branches: [ "github_Actions" ]
-
   workflow_dispatch: 
     inputs: 
       deployment_target:
